@@ -1,0 +1,745 @@
+(vim.dvs.VmwareDistributedVirtualSwitch.ConfigInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   uuid = '50 25 3b 40 6f 10 a8 d4-a0 31 d2 7b 91 55 f6 37',
+   name = 'RegionA01-vDS-COMP',
+   numStandalonePorts = 0,
+   numPorts = 524,
+   maxPorts = 2147483647,
+   uplinkPortPolicy = (vim.DistributedVirtualSwitch.NameArrayUplinkPortPolicy) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      uplinkPortName = (str) [
+         'uplink1',
+         'uplink2',
+         'uplink3',
+         'uplink4'
+      ]
+   },
+   uplinkPortgroup = (vim.dvs.DistributedVirtualPortgroup) [
+      'vim.dvs.DistributedVirtualPortgroup:dvportgroup-46'
+   ],
+   defaultPortConfig = (vim.dvs.VmwareDistributedVirtualSwitch.VmwarePortConfigPolicy) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      blocked = (vim.BoolPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = false
+      },
+      vmDirectPathGen2Allowed = (vim.BoolPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = false
+      },
+      inShapingPolicy = (vim.dvs.DistributedVirtualPort.TrafficShapingPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         enabled = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         averageBandwidth = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 100000000
+         },
+         peakBandwidth = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 100000000
+         },
+         burstSize = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 104857600
+         }
+      },
+      outShapingPolicy = (vim.dvs.DistributedVirtualPort.TrafficShapingPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         enabled = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         averageBandwidth = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 100000000
+         },
+         peakBandwidth = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 100000000
+         },
+         burstSize = (vim.LongPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 104857600
+         }
+      },
+      vendorSpecificConfig = (vim.dvs.DistributedVirtualPort.VendorSpecificConfig) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         keyValue = (vim.dvs.KeyedOpaqueBlob) []
+      },
+      networkResourcePoolKey = (vim.StringPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = '-1'
+      },
+      filterPolicy = (vim.dvs.DistributedVirtualPort.FilterPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         filterConfig = (vim.dvs.DistributedVirtualPort.FilterConfig) []
+      },
+      vlan = (vim.dvs.VmwareDistributedVirtualSwitch.VlanIdSpec) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         vlanId = 0
+      },
+      qosTag = (vim.IntPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = -1
+      },
+      uplinkTeamingPolicy = (vim.dvs.VmwareDistributedVirtualSwitch.UplinkPortTeamingPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         policy = (vim.StringPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 'loadbalance_srcid'
+         },
+         reversePolicy = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = true
+         },
+         notifySwitches = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = true
+         },
+         rollingOrder = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         failureCriteria = (vim.dvs.VmwareDistributedVirtualSwitch.FailureCriteria) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            checkSpeed = (vim.StringPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = 'minimum'
+            },
+            speed = (vim.IntPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = 10
+            },
+            checkDuplex = (vim.BoolPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = false
+            },
+            fullDuplex = (vim.BoolPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = false
+            },
+            checkErrorPercent = (vim.BoolPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = false
+            },
+            percentage = (vim.IntPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = 0
+            },
+            checkBeacon = (vim.BoolPolicy) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               inherited = false,
+               value = false
+            }
+         },
+         uplinkPortOrder = (vim.dvs.VmwareDistributedVirtualSwitch.UplinkPortOrderPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            activeUplinkPort = (str) [
+               'uplink1',
+               'uplink2',
+               'uplink3',
+               'uplink4'
+            ],
+            standbyUplinkPort = (str) []
+         }
+      },
+      securityPolicy = (vim.dvs.VmwareDistributedVirtualSwitch.SecurityPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         allowPromiscuous = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         macChanges = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         forgedTransmits = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         }
+      },
+      ipfixEnabled = (vim.BoolPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = false
+      },
+      txUplink = (vim.BoolPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         value = false
+      },
+      lacpPolicy = (vim.dvs.VmwareDistributedVirtualSwitch.UplinkLacpPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         enable = (vim.BoolPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = false
+         },
+         mode = (vim.StringPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            value = 'passive'
+         }
+      },
+      macManagementPolicy = (vim.dvs.VmwareDistributedVirtualSwitch.MacManagementPolicy) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         inherited = false,
+         allowPromiscuous = <unset>,
+         macChanges = <unset>,
+         forgedTransmits = <unset>,
+         macLearningPolicy = (vim.dvs.VmwareDistributedVirtualSwitch.MacLearningPolicy) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            inherited = false,
+            enabled = false,
+            allowUnicastFlooding = <unset>,
+            limit = <unset>,
+            limitPolicy = <unset>
+         }
+      }
+   },
+   host = (vim.dvs.HostMember) [
+      (vim.dvs.HostMember) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         runtimeState = (vim.dvs.HostMember.RuntimeState) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            currentMaxProxySwitchPorts = 2560
+         },
+         config = (vim.dvs.HostMember.ConfigInfo) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            host = 'vim.HostSystem:host-31',
+            maxProxySwitchPorts = 512,
+            vendorSpecificConfig = (vim.dvs.KeyedOpaqueBlob) [
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               }
+            ],
+            backing = (vim.dvs.HostMember.PnicBacking) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               pnicSpec = (vim.dvs.HostMember.PnicSpec) [
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic0',
+                     uplinkPortKey = '517',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2054375930
+                  },
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic1',
+                     uplinkPortKey = '516',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2049941988
+                  }
+               ]
+            }
+         },
+         productInfo = <unset>,
+         uplinkPortKey = (str) [
+            '516',
+            '517',
+            '518',
+            '519'
+         ],
+         status = 'up',
+         statusDetail = <unset>
+      },
+      (vim.dvs.HostMember) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         runtimeState = (vim.dvs.HostMember.RuntimeState) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            currentMaxProxySwitchPorts = 2560
+         },
+         config = (vim.dvs.HostMember.ConfigInfo) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            host = 'vim.HostSystem:host-29',
+            maxProxySwitchPorts = 512,
+            vendorSpecificConfig = (vim.dvs.KeyedOpaqueBlob) [
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               },
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               }
+            ],
+            backing = (vim.dvs.HostMember.PnicBacking) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               pnicSpec = (vim.dvs.HostMember.PnicSpec) [
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic0',
+                     uplinkPortKey = '513',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2045329254
+                  },
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic1',
+                     uplinkPortKey = '512',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2040248624
+                  }
+               ]
+            }
+         },
+         productInfo = <unset>,
+         uplinkPortKey = (str) [
+            '512',
+            '513',
+            '514',
+            '515'
+         ],
+         status = 'up',
+         statusDetail = <unset>
+      },
+      (vim.dvs.HostMember) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         runtimeState = (vim.dvs.HostMember.RuntimeState) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            currentMaxProxySwitchPorts = 2560
+         },
+         config = (vim.dvs.HostMember.ConfigInfo) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            host = 'vim.HostSystem:host-32',
+            maxProxySwitchPorts = 512,
+            vendorSpecificConfig = (vim.dvs.KeyedOpaqueBlob) [
+               (vim.dvs.KeyedOpaqueBlob) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = 'com.vmware.net.feature.cap.supportVmotionFromOpaqueNetwork',
+                  opaqueData = '1'
+               }
+            ],
+            backing = (vim.dvs.HostMember.PnicBacking) {
+               dynamicType = <unset>,
+               dynamicProperty = (vmodl.DynamicProperty) [],
+               pnicSpec = (vim.dvs.HostMember.PnicSpec) [
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic0',
+                     uplinkPortKey = '521',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2063053921
+                  },
+                  (vim.dvs.HostMember.PnicSpec) {
+                     dynamicType = <unset>,
+                     dynamicProperty = (vmodl.DynamicProperty) [],
+                     pnicDevice = 'vmnic1',
+                     uplinkPortKey = '520',
+                     uplinkPortgroupKey = 'dvportgroup-46',
+                     connectionCookie = 2058518706
+                  }
+               ]
+            }
+         },
+         productInfo = <unset>,
+         uplinkPortKey = (str) [
+            '520',
+            '521',
+            '522',
+            '523'
+         ],
+         status = 'up',
+         statusDetail = <unset>
+      }
+   ],
+   productInfo = (vim.dvs.ProductSpec) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      name = 'DVS',
+      vendor = 'VMware, Inc.',
+      version = '6.6.0',
+      build = '00000',
+      forwardingClass = 'cswitch',
+      bundleId = <unset>,
+      bundleUrl = <unset>
+   },
+   targetInfo = <unset>,
+   extensionKey = <unset>,
+   vendorSpecificConfig = (vim.dvs.KeyedOpaqueBlob) [
+      (vim.dvs.KeyedOpaqueBlob) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         key = 'com.vmware.vrdma.uuid',
+         opaqueData = '52 2f 8c 7c 23 a0 d8 eb-00 d3 d5 ae f5 a9 35 49'
+      }
+   ],
+   policy = (vim.DistributedVirtualSwitch.SwitchPolicy) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      autoPreInstallAllowed = true,
+      autoUpgradeAllowed = true,
+      partialUpgradeAllowed = true
+   },
+   description = <unset>,
+   configVersion = '6',
+   contact = (vim.DistributedVirtualSwitch.ContactInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      name = <unset>,
+      contact = <unset>
+   },
+   switchIpAddress = <unset>,
+   createTime = 2018-04-25T16:42:40.427999Z,
+   networkResourceManagementEnabled = false,
+   defaultProxySwitchMaxNumPorts = 512,
+   healthCheckConfig = (vim.DistributedVirtualSwitch.HealthCheckConfig) [
+      (vim.dvs.VmwareDistributedVirtualSwitch.VlanMtuHealthCheckConfig) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         enable = false,
+         interval = 0
+      },
+      (vim.dvs.VmwareDistributedVirtualSwitch.TeamingHealthCheckConfig) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         enable = false,
+         interval = 0
+      }
+   ],
+   infrastructureTrafficResourceConfig = (vim.DistributedVirtualSwitch.HostInfrastructureTrafficResource) [],
+   netResourcePoolTrafficResourceConfig = (vim.DistributedVirtualSwitch.HostInfrastructureTrafficResource) [],
+   networkResourceControlVersion = 'version2',
+   vmVnicNetworkResourcePool = (vim.dvs.VmVnicNetworkResourcePool) [],
+   pnicCapacityRatioForReservation = <unset>,
+   vspanSession = (vim.dvs.VmwareDistributedVirtualSwitch.VspanSession) [],
+   pvlanConfig = (vim.dvs.VmwareDistributedVirtualSwitch.PvlanMapEntry) [],
+   maxMtu = 1500,
+   linkDiscoveryProtocolConfig = (vim.host.LinkDiscoveryProtocolConfig) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      protocol = 'cdp',
+      operation = 'listen'
+   },
+   ipfixConfig = (vim.dvs.VmwareDistributedVirtualSwitch.IpfixConfig) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      collectorIpAddress = <unset>,
+      collectorPort = 0,
+      observationDomainId = 0,
+      activeFlowTimeout = 60,
+      idleFlowTimeout = 15,
+      samplingRate = 0,
+      internalFlowsOnly = false
+   },
+   lacpGroupConfig = (vim.dvs.VmwareDistributedVirtualSwitch.LacpGroupConfig) [],
+   lacpApiVersion = 'singleLag',
+   multicastFilteringMode = 'legacyFiltering'
+}
