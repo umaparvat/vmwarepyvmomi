@@ -1,4 +1,5 @@
 import re
+import base64
 import json
 from pyVmomi.VmomiSupport import Object, DataObject, F_LINK, F_LINKABLE, F_OPTIONAL, F_SECRET, ManagedObject, PY3
 from pyVmomi.VmomiSupport import UncallableManagedMethod, ManagedMethod, binary, GetVmodlType
@@ -37,13 +38,25 @@ class MyJSONDecoder(json.JSONDecoder):
                     else:
                         if issubclass(cust_type, datetime):
                             setattr(sub_ins, k, ParseISO8601(v))
-                        if issubclass(cust_type, binary):
+                        elif issubclass(cust_type, binary):
                             if PY3:
                                 v = str.encode(v)
                             data_encode = base64.b64decode(v)
                             setattr(sub_ins, k, cust_type(data_encode))
-                        if issubclass(cust_type, type):
+                        elif issubclass(cust_type, type):
                             setattr(sub_ins, k, cust_type(v))
+                        elif issubclass(cust_type, ManagedObject):
+                            if isinstance(v, string_types):
+                                mob = v.split(":")
+                                if len(mob) == 3:
+                                    mo_obj, serverGuid, moId = mob
+                                    mo_ins = GetVmodlType(mo_obj)(moId=moId, serverGuid=serverGuid)
+                                else:
+                                    mo_obj, moId = mob
+                                    mo_ins = GetVmodlType(mo_obj)(moId=moId)
+                            else:
+                                mo_ins = self.call_dict(v)
+                            setattr(sub_ins, k, mo_ins)
                         else:
                             setattr(sub_ins, k, v)
                 return sub_ins
@@ -56,3 +69,6 @@ class MyJSONDecoder(json.JSONDecoder):
     def object_hook(self, our_dict):
         obj = self.call_dict(our_dict)
         return obj
+
+# To test the code
+restore_json = json.loads(restore_content, cls=MyJSONDecoder)
